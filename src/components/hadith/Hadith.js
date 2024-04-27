@@ -212,12 +212,10 @@ const AllHadith = ({ allHadith }) => {
                     alt="copy icon"
                     width={25}
                     height={25}
-                    onClick={() =>
-                      document.getElementById(hadith?.hadith_id).showModal()
-                    }
+                    onClick={() => document.getElementById("2").showModal()}
                   />
 
-                  <BookmarkModal id={hadith?.hadith_id} />
+                  <BookmarkModal id={"2"} />
 
                   {/* pop up  */}
                   <div className="absolute bottom-9  right-[-5px] invisible  group-hover/item:visible">
@@ -238,11 +236,9 @@ const AllHadith = ({ allHadith }) => {
                 {/*share  */}
                 <div
                   className="relative group/item cursor-pointer"
-                  onClick={() =>
-                    document.getElementById(hadith?.hadith_id).showModal()
-                  }
+                  onClick={() => document.getElementById("1").showModal()}
                 >
-                  <ShareModal id={hadith?.hadith_id} />
+                  <ShareModal id={"1"} />
 
                   <Image src={share} alt="copy icon" width={25} height={25} />
 
