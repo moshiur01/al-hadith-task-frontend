@@ -46,7 +46,9 @@ export default function Home({ allHadith }) {
 
 export const getStaticProps = async () => {
   try {
-    const res = await fetch("http://localhost:5000/hadiths");
+    const res = await fetch(
+      "https://mocki.io/v1/aec17c06-06d6-400e-9f60-fecf011b66ee"
+    );
     const data = await res.json();
     return {
       props: {

@@ -2,7 +2,7 @@
 
 ## [Live link]()
 
-## [Frontend]() | [Backend]()
+## [Frontend](https://github.com/moshiur01/al-hadith-task-frontend) | [Backend]()
 
 ## Demo Video
 
