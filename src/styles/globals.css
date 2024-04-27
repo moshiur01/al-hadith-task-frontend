@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.maateen.me/kalpurush/font.css");
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --my-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,15 +16,62 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+::-webkit-scrollbar {
+  width: 6px;
+  margin-right: 20px;
+}
+::-webkit-scrollbar-button {
+  background: #c1c1c1;
+  height: 8px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-button:hover {
+  background: #a8a8a8;
+}
+::-webkit-scrollbar-track-piece {
+  background: #ebeef2;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.scrollbar-light::-webkit-scrollbar-track-piece {
+  background: white;
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--my-color);
+  font-family: "Kalpurush", Arial, sans-serif !important;
+}
+
+.font-bangla {
+  font-family: "kalpurush";
+  word-spacing: 8px;
+}
+
+.font-arabic {
+  font-family: me_quran;
+  word-spacing: 8px;
+}
+
+.font-arabic-KFGQ_hafs {
+  font-family: KFGQ_hafs;
+  word-spacing: 12px;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: me_quran;
+  src: url("/src/assets/fonts/me_quran.ttf");
+}
+
+@font-face {
+  font-family: KFGQ_hafs;
+  src: url("/src/assets/fonts/KFGQ_hafs.ttf");
 }
 
 @layer utilities {
