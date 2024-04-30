@@ -45,12 +45,16 @@
 
 body {
   background-color: var(--my-color);
-  font-family: "Kalpurush", Arial, sans-serif !important;
+  font-family: "Kalpurush", Arial, sans-serif;
 }
 
 .font-bangla {
   font-family: "kalpurush";
   word-spacing: 8px;
+}
+
+.font-bangla-v2 {
+  font-family: "kalpurush";
 }
 
 .font-arabic {
