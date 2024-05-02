@@ -11,21 +11,33 @@ const Header = () => {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         {/* desktop  */}
+
+        {/* heading + logo  */}
         <Link href={"/"} className="flex gap-6 lg:mt-2 lg:ml-1">
           {/* logo */}
           <div className="w-11 md-max:w-9 h-11 md-max:h-9">
             <Image src={logo} alt="website-logo" />
           </div>
-          <div>
-            <p className="font-bold text-xl">হাদিস সমূহ</p>
-            <p className="text-sm">হাদিস পড়ুন শিখুন এবং জানুন</p>
+          <div className="my-auto">
+            {/* for lg and more  */}
+            <p className="font-bold lg:text-xl text-3xl hidden lg:block ">
+              হাদিস সমূহ
+            </p>
+
+            {/* for sm and tablet  */}
+            <p className="font-medium lg:text-xl text-2xl text-[#2B9E76] lg:hidden xl:hidden 2xl:hidden ">
+              আল হাদিস
+            </p>
+            <p className="text-sm hidden lg:inline-block">
+              হাদিস পড়ুন শিখুন এবং জানুন
+            </p>
           </div>
         </Link>
       </div>
 
-      <div className="navbar-end lg:gap-16 gap-5 mt-2 ">
+      <div className="navbar-end lg:gap-8 gap-5 my-auto ">
         {/* search bar  for lg */}
-        <div className="hidden lg:inline-block">
+        <div className="hidden lg:inline-block ">
           <div className="relative flex font-sans ">
             <div className="px-3 py-2 rounded-md flex items-center justify-center absolute top-[6px] left-1 bottom-1 lg:size-10 ">
               <svg
@@ -45,7 +57,7 @@ const Header = () => {
               </svg>
             </div>
             <input
-              className="w-full rounded-md pr-4 pl-12 py-3 shadow-sm focus:outline-none border-[1.5px] border-[#DEE1E5]  placeholder:text-mute-grey placeholder:text-base bg-white lg:w-64"
+              className="w-full rounded-md pr-4 pl-12 py-3 shadow-sm focus:outline-none border-[2.5px] border-[#DEE1E5]  placeholder:text-mute-grey placeholder:text-base bg-white lg:w-64"
               id="search"
               name="search"
               type="text"
@@ -55,8 +67,8 @@ const Header = () => {
         </div>
 
         {/* search btn for sm and md*/}
-        <div>
-          <button className="bg-[#DEE1E5] size-11 flex justify-center items-center rounded-lg">
+        <div className="mb-2">
+          <button className="bg-[#DEE1E5] size-11 flex justify-center items-center rounded-lg lg:hidden">
             {/* search logo  */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,34 +88,36 @@ const Header = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <SearchModal id={"search-modal"} />
+            {/* <SearchModal id={"search-modal"} /> */}
           </button>
+          <SearchModal id={"search-modal"} />
         </div>
 
         {/* donate btn */}
-        <div className="hidden lg:block lg:mr-2 ">
+        <div className="hidden 2xl:block ">
           <button className="flex bg-[#2B9E76] w-40 h-12 rounded-lg items-center justify-center gap-3">
             <p className="text-white text-base font-semibold">সাপোর্ট করুন</p>
             <Image src={helpingHand} alt="support logo" className="" />
           </button>
         </div>
 
+        {/* responsive drawer  */}
         {/* setting - drawer  */}
-        <div className="lg:hidden size-14">
+        <div className="size-14 2xl:hidden">
           <div className="drawer drawer-end">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
               {/* Page content here */}
               <label
                 htmlFor="my-drawer-4"
-                className="drawer-button btn bg-green-700 "
+                className="drawer-button btn bg-[#2B9E76] "
               >
                 {/* drawer-icon  */}
                 <Image
                   src={drawerIcon}
                   alt="drawer-icon"
-                  width={50}
-                  height={50}
+                  width={60}
+                  height={60}
                 />
               </label>
             </div>

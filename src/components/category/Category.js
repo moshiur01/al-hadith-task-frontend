@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Category = () => {
-  const [active, setActive] = useState("book");
+  const [active, setActive] = useState("chapter");
 
   const hadithBookName = [
     { id: 1, name: "সহিহ বুখারি", denote: "B", total: "৭৫৬৩" },
