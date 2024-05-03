@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Category = () => {
+const Category = ({ isDrawerMode }) => {
   const [active, setActive] = useState("chapter");
 
   const hadithBookName = [
@@ -43,7 +43,6 @@ const Category = () => {
         >
           বই
         </p>
-
         {/* chapter bar  */}
         <p
           className={`flex-grow h-full py-4 text-lg rounded-tr-lg cursor-pointer ${

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import bookmark from "../../assets/bookmark-thin.svg";
 import breadcrumb from "../../assets/breadcome-book.svg";
@@ -15,6 +16,11 @@ import ShareModal from "../UI/Modal/ShareModal";
 import Category from "../category/Category";
 
 const AllHadith = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
   const allHadith = [
     {
       hadith_id: 1,
@@ -225,10 +231,18 @@ const AllHadith = () => {
       {/* category name for mb  */}
       <div className="h-14 mt-1 mr-5 px-5 flex justify-between items-center bg-white rounded-lg xl:rounded-b-xl xl:hidden">
         <div className="flex gap-3 items-center">
-          {/* drawer */}
-
+          {/*
+          
+          //*drawer
+          
+          */}
           <div className="drawer">
-            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <input
+              id="my-drawer"
+              type="checkbox"
+              className="drawer-toggle"
+              checked={isDrawerOpen}
+            />
             <div className="drawer-content">
               {/* Page content here */}
               <label htmlFor="my-drawer" className=" drawer-button">
@@ -238,6 +252,7 @@ const AllHadith = () => {
                   alt="book name logo"
                   width={20}
                   height={20}
+                  onClick={handleDrawerToggle}
                 />
               </label>
             </div>
@@ -247,9 +262,30 @@ const AllHadith = () => {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <div className="bg-white w-[350px] h-[797px] pt-20 px-4 overflow-auto">
+              <span className="bg-white w-[350px] h-[797px] pt-6 px-4 overflow-auto">
+                <div className="pb-6 flex justify-between items-center">
+                  <p className="font-bangla-v2 font-medium text-2xl ">
+                    ক্যাটাগরি
+                  </p>
+                  {/* cross svg  */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="size-6"
+                    onClick={handleDrawerToggle}
+                  >
+                    <path
+                      d="M6 18L18 6M6 6L18 18"
+                      stroke="#4D4D4D"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </div>
                 <Category />
-              </div>
+              </span>
             </div>
           </div>
 
