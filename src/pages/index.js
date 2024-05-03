@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="h-lvh">
+    <div className="h-lvh sm:relative md:relative lg:block">
       <header>
         <Header />
       </header>
@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="lg:hidden">
+      <div className="lg:hidden z-[9999999] absolute bottom-0 w-full">
         <DownNavbar />
       </div>
       <ToastContainer
