@@ -13,7 +13,7 @@ const DownNavbar = () => {
       <div className="w-14 h-14 flex items-center justify-center">
         <Image src={homeIcon} alt="asdfasdf" width={23} height={25} />
       </div>
-      <div className="w-14 h-14 backdrop:flex items-center justify-center bg-[#2B9E76] rounded-lg">
+      <div className="w-14 h-14 flex items-center justify-center bg-[#2B9E76] rounded-lg">
         <Image src={book} alt="asdfasdf" width={25} height={25} />
       </div>
       <div className="w-14 h-14 flex items-center justify-center">
