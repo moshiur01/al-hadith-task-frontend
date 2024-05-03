@@ -100,7 +100,7 @@ const Category = ({ isDrawerMode }) => {
               {/* numbering */}
               <div className="ml-4 w-12 sm-max:w-10 flex items-center relative ">
                 <h3
-                  className={`text-white absolute font-semibold ${
+                  className={`text-white absolute font-bangla-v2 ${
                     book?.denote.length > 1 ? "left-4" : "left-5"
                   }`}
                 >

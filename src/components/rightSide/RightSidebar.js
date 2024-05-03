@@ -10,7 +10,7 @@ const RightSidebar = ({ drawerView }) => {
       {/* setting part  */}
       <div className="bg-white rounded-xl">
         {drawerView === true ? (
-          <div className="text-center text-2xl pt-4 flex lg:justify-between lg:mx-4 py-6">
+          <div className="text-center text-2xl pt-4 flex justify-between mx-4 py-6">
             <h3>সেটিংস</h3>
             <svg
               xmlns="http://www.w3.org/2000/svg"
