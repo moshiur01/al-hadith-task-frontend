@@ -9,21 +9,21 @@ import subjectWise from "../../assets/subject-wise.svg";
 
 const DownNavbar = () => {
   return (
-    <div className="bg-white w-full h-full flex flex-row items-center justify-center gap-28 p-2  ">
+    <div className="bg-white w-full h-12 flex flex-row items-center justify-center gap-32">
       <div className="w-14 h-14 flex items-center justify-center">
-        <Image src={homeIcon} alt="asdfasdf" width={23} height={25} />
+        <Image src={homeIcon} alt="asdfasdf" width={20} height={20} />
       </div>
-      <div className="w-14 h-14 flex items-center justify-center bg-[#2B9E76] rounded-lg">
-        <Image src={book} alt="asdfasdf" width={25} height={25} />
-      </div>
-      <div className="w-14 h-14 flex items-center justify-center">
-        <Image src={subjectWise} alt="asdfasdf" width={25} height={25} />
+      <div className="w-10 h-10 flex items-center justify-center bg-[#2B9E76] rounded-lg">
+        <Image src={book} alt="asdfasdf" width={20} height={20} />
       </div>
       <div className="w-14 h-14 flex items-center justify-center">
-        <Image src={bookmark} alt="asdfasdf" width={25} height={25} />
+        <Image src={subjectWise} alt="asdfasdf" width={20} height={20} />
       </div>
       <div className="w-14 h-14 flex items-center justify-center">
-        <Image src={searchHadith} alt="asdfasdf" width={25} height={25} />
+        <Image src={bookmark} alt="asdfasdf" width={20} height={20} />
+      </div>
+      <div className="w-14 h-14 flex items-center justify-center">
+        <Image src={searchHadith} alt="asdfasdf" width={20} height={20} />
       </div>
     </div>
   );

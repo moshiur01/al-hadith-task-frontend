@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="lg:hidden z-[9999999] absolute bottom-0 w-full">
+      <div className="lg:hidden z-[9999999] absolute bottom-0 w-full ">
         <DownNavbar />
       </div>
       <ToastContainer
