@@ -11,7 +11,6 @@ import lineBar from "../../assets/linebar.svg";
 import openBook from "../../assets/open-book.svg";
 import report from "../../assets/report.svg";
 import share from "../../assets/share.svg";
-import triangle from "../../assets/triangle.svg";
 import BookmarkModal from "../UI/Modal/Bookmarkmodal";
 import ShareModal from "../UI/Modal/ShareModal";
 import Category from "../category/Category";
@@ -381,11 +380,14 @@ const AllHadith = () => {
                   </span>
                 </p>
               </div>
+
+              {/* hadith action btns  */}
               <div className="flex justify-between gap-10">
                 {" "}
                 {/* copy  */}
                 <div
-                  className="relative group/item cursor-pointer"
+                  className="lg:tooltip"
+                  data-tip="কপি"
                   onClick={() =>
                     copyToClipboard(
                       `${hadith?.narrator} থেকে বর্ণিত, \n\n${hadith?.bn} \n\nসহিহ বুখারী: ${hadith?.hadith_id} \nহাদিসের মান: ${hadith?.grade} \nSource: www.ihadis.com/bukhari/hadith/${hadith?.hadith_id}`
@@ -393,25 +395,9 @@ const AllHadith = () => {
                   }
                 >
                   <Image src={copy} alt="copy icon" width={25} height={25} />
-
-                  {/* pop up  */}
-                  <div className="absolute bottom-9 right-[-5px] invisible  group-hover/item:visible">
-                    <div className="relative">
-                      <p className="p-1 bg-black text-white rounded-lg text-xs">
-                        কপি
-                      </p>
-                      <Image
-                        src={triangle}
-                        alt="triangle"
-                        width={10}
-                        height={10}
-                        className="absolute left-3"
-                      />
-                    </div>
-                  </div>
                 </div>
                 {/* bookmark  */}
-                <div className="relative group/item cursor-pointer">
+                <div className="lg:tooltip" data-tip="বুকমার্ক">
                   <Image
                     src={bookmark}
                     alt="copy icon"
@@ -421,90 +407,28 @@ const AllHadith = () => {
                   />
 
                   <BookmarkModal id={"2"} />
-
-                  {/* pop up  */}
-                  <div className="absolute bottom-9  right-[-5px] invisible  group-hover/item:visible">
-                    <div className="relative">
-                      <p className="p-1 bg-black text-white rounded-lg text-xs">
-                        বুকমার্ক
-                      </p>
-                      <Image
-                        src={triangle}
-                        alt="triangle"
-                        width={10}
-                        height={10}
-                        className="absolute left-5"
-                      />
-                    </div>
-                  </div>
                 </div>
                 {/*share  */}
                 <div
-                  className="relative group/item cursor-pointer"
+                  className="lg:tooltip"
+                  data-tip="শেয়ার"
                   onClick={() => document.getElementById("1").showModal()}
                 >
                   <ShareModal id={"1"} />
 
                   <Image src={share} alt="copy icon" width={25} height={25} />
-
-                  {/* pop up  */}
-                  <div className="absolute bottom-9 right-[-5px] invisible  group-hover/item:visible">
-                    <div className="relative">
-                      <p className="p-1 bg-black text-white rounded-lg text-xs">
-                        শেয়ার
-                      </p>
-                      <Image
-                        src={triangle}
-                        alt="triangle"
-                        width={10}
-                        height={10}
-                        className="absolute left-4"
-                      />
-                    </div>
-                  </div>
                 </div>
                 {/* report  */}
                 <div
-                  className="relative group/item cursor-pointer"
+                  className="lg:tooltip"
+                  data-tip="রিপোর্ট"
                   onClick={() => toast.success("শিগ্রই আসছে")}
                 >
                   <Image src={report} alt="copy icon" width={25} height={25} />
-
-                  {/* pop up  */}
-                  <div className="absolute bottom-9 right-[-5px] invisible  group-hover/item:visible">
-                    <div className="relative">
-                      <p className="p-1 bg-black text-white rounded-lg text-xs">
-                        রিপোর্ট
-                      </p>
-                      <Image
-                        src={triangle}
-                        alt="triangle"
-                        width={10}
-                        height={10}
-                        className="absolute left-4"
-                      />
-                    </div>
-                  </div>
                 </div>
                 {/* direct  */}
-                <div className="relative group/item cursor-pointer">
+                <div className="lg:tooltip" data-tip="ডিরেক্ট">
                   <Image src={direct} alt="copy icon" width={25} height={25} />
-
-                  {/* pop up  */}
-                  <div className="absolute bottom-9 right-[-5px] invisible  group-hover/item:visible">
-                    <div className="relative">
-                      <p className="p-1 bg-black text-white rounded-lg text-xs">
-                        ডিরেক্ট
-                      </p>
-                      <Image
-                        src={triangle}
-                        alt="triangle"
-                        width={10}
-                        height={10}
-                        className="absolute left-4"
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
