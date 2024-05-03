@@ -16,12 +16,12 @@ export default function Home() {
       </header>
 
       <main className="flex lg:h-[837px] md:h-[700px] sm:h-[700px]">
-        <nav className="flex-auto hidden lg:inline-block">
+        <nav className="flex-auto hidden lg:inline-block h-dvh">
           <LeftNavbar />
         </nav>
 
         <div className="bg-gray-100 w-full rounded-tl-3xl flex">
-          <div className="flex-none w-[350px] h-[797px] bg-white mt-6 hidden xl:block rounded-xl lg:ml-5 overflow-auto">
+          <div className="flex-none w-[350px] h-[797px] bg-white mt-6 hidden xl:block rounded-2xl lg:ml-5 overflow-auto">
             <Category />
           </div>
           <div className="grow mt-6 overflow-auto">

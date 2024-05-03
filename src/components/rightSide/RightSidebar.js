@@ -3,7 +3,6 @@ import { useState } from "react";
 import downArrow from "../../assets/down-arrow.svg";
 import Message from "./Message";
 const RightSidebar = ({ drawerView }) => {
-  console.log(drawerView);
   const [arabicFontRange, setArabicFontRange] = useState(30);
   const [TranslateFontRange, setTranslateFontRange] = useState(60);
   return (
