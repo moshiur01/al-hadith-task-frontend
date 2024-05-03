@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 import downArrow from "../../../assets/down-arrow.svg";
 import tikMark from "../../../assets/tikmark.svg";
 

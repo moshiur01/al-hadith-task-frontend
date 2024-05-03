@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 import copy from "../../../assets/copy.svg";
 import email from "../../../assets/email.svg";
 import facebook from "../../../assets/facebook.svg";

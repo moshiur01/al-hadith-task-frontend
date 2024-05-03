@@ -5,7 +5,8 @@ import Category from "@/components/category/Category";
 import AllHadith from "@/components/hadith/Hadith";
 import RightSidebar from "@/components/rightSide/RightSidebar";
 import { Inter } from "next/font/google";
-import { Toaster } from "react-hot-toast";
+import { Bounce, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -39,7 +40,19 @@ export default function Home() {
       <div className="lg:hidden">
         <DownNavbar />
       </div>
-      <Toaster position="bottom-right" reverseOrder={false} />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </div>
   );
 }

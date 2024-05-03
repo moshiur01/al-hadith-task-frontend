@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import toast from "react-hot-toast";
+
+import { toast } from "react-toastify";
 import bookmark from "../../assets/bookmark-thin.svg";
 import breadcrumb from "../../assets/breadcome-book.svg";
 import bookLogo from "../../assets/bukhari.svg";
@@ -176,7 +177,7 @@ const AllHadith = () => {
   const copyToClipboard = async (text) => {
     try {
       await navigator.clipboard.writeText(text);
-      toast.success("লিঙ্ক কপি করা হয়েছে");
+      toast("লিঙ্ক কপি করা হয়েছে");
     } catch (error) {
       console.log(error);
       alert("Error copying to clipboard:", error);
