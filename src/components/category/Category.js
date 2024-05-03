@@ -28,7 +28,7 @@ const Category = () => {
   ];
 
   return (
-    <div>
+    <div className="">
       <div
         className={`flex flex-row h-14 border-b items-center text-center font-semibold `}
       >
@@ -58,8 +58,8 @@ const Category = () => {
       </div>
 
       {/* search  */}
-      <div className=" relative flex font-sans px-4 py-3 my-3">
-        <div className="px-3 py-2 rounded-md flex items-center justify-center absolute top-1 bottom-1">
+      <div className=" relative flex font-sans px-4 py-3 mt-3">
+        <div className="px-3 rounded-md flex items-center justify-center absolute top-1 bottom-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -77,7 +77,7 @@ const Category = () => {
           </svg>
         </div>
         <input
-          className="w-full rounded-md  pr-4 pl-12 py-2 shadow-sm focus:outline-none border-[1.5px] border-[#DEE1E5]  placeholder:text-mute-grey placeholder:text-md  bg-[#F2F4F6]"
+          className="w-full h-12 rounded-md pr-4 pl-12 shadow-sm focus:outline-none border-[1.5px] border-[#DEE1E5]  placeholder:text-mute-grey placeholder:text-md  bg-[#F2F4F6] border-none"
           id="search"
           name="search"
           type="text"
@@ -93,12 +93,18 @@ const Category = () => {
         <>
           {hadithBookName?.map((book) => (
             <div
-              className="mx-4 flex rounded-xl h-24 gap-6 hover:bg-[#EBFCF6]"
+              className={`mx-4 flex rounded-xl h-24 gap-6 hover:bg-[#EBFCF6] ${
+                book?.id === 1 && `bg-[#EBFCF6]`
+              } `}
               key={book.id}
             >
               {/* numbering */}
-              <div className="ml-4 w-12 sm-max:w-10 flex items-center relative">
-                <h3 className="text-white absolute font-semibold left-5">
+              <div className="ml-4 w-12 sm-max:w-10 flex items-center relative ">
+                <h3
+                  className={`text-white absolute font-semibold ${
+                    book?.denote.length > 1 ? "left-4" : "left-5"
+                  }`}
+                >
                   {book?.denote}
                 </h3>
                 <svg
@@ -131,10 +137,12 @@ const Category = () => {
 
       {/* chapter wise  */}
       {active === "chapter" && (
-        <>
+        <div className="">
           {hadithChapterName?.map((chapter) => (
             <div
-              className="mx-4 flex rounded-xl h-24 gap-6 hover:bg-[#EBFCF6] bg- [#EBFCF6]"
+              className={`mx-4 flex rounded-xl h-24 gap-6 hover:bg-[#EBFCF6] cursor-pointer mb-2 ${
+                chapter?.id === 1 && `bg-[#EBFCF6]`
+              }`}
               key={chapter?.id}
             >
               {/* numbering */}
@@ -167,7 +175,7 @@ const Category = () => {
               </div>
             </div>
           ))}
-        </>
+        </div>
       )}
     </div>
   );

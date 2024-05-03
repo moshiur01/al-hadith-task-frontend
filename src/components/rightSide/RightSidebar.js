@@ -9,6 +9,23 @@ const RightSidebar = () => {
     <div>
       {/* setting part  */}
       <div className="bg-white rounded-xl">
+        {/* <div className="text-center text-2xl pt-4 :flex lg:justify-between lg:mx-4">
+          <h3>সেটিংস</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="size-7"
+          >
+            <path
+              d="M6 18L18 6M6 6L18 18"
+              stroke="#4D4D4D"
+              strokewidth="1.5"
+              strokelinecap="round"
+              strokelinejoin="round"
+            ></path>
+          </svg>
+        </div> */}
         <div className="text-center text-2xl pt-4">
           <h3>সেটিংস</h3>
         </div>
@@ -59,7 +76,6 @@ const RightSidebar = () => {
             <span> {arabicFontRange}</span>
           </div>
         </div>
-
         {/*translate size */}
         <div className="mx-4 mt-8">
           <p className="mb-3 font-medium text-[16.8px]">অনুবাদ ফন্ট সাইজ</p>

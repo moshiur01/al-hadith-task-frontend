@@ -21,10 +21,10 @@ export default function Home() {
         </nav>
 
         <div className="bg-gray-100 w-full rounded-tl-3xl flex">
-          <div className="flex-none w-[350px] h-[797px] bg-white mt-6 hidden lg:block rounded-xl lg:ml-5 overflow-y-scroll scrollbar-light">
+          <div className="flex-none w-[350px] h-[797px] bg-white mt-6 hidden xl:block rounded-xl lg:ml-5 overflow-auto">
             <Category />
           </div>
-          <div className="grow mt-6 overflow-y-scroll scrollbar-light">
+          <div className="grow mt-6 overflow-auto">
             <AllHadith />
           </div>
 

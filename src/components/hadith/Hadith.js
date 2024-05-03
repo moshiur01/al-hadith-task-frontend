@@ -14,7 +14,7 @@ import BookmarkModal from "../UI/Modal/Bookmarkmodal";
 import ShareModal from "../UI/Modal/ShareModal";
 import Category from "../category/Category";
 
-const AllHadith = ({}) => {
+const AllHadith = () => {
   const allHadith = [
     {
       hadith_id: 1,
@@ -178,44 +178,53 @@ const AllHadith = ({}) => {
   };
 
   return (
-    <div className="font-sans lg:ml-5">
+    <div className="font-sans lg:pl-5">
       {/* breadcrumbs */}
-      <div className="text-sm breadcrumbs bg-[#FAFBFB] mr-5 h-14 rounded-t-xl  flex items-center ">
-        <ul className="ml-5 text-md">
-          <li>
-            <Image
-              src={breadcrumb}
-              alt="breadcrumbs book icon "
-              width={20}
-              height={20}
-            />
-          </li>
-          <li>
-            <a>Bukari</a>
-          </li>
-          <li>1</li>
-        </ul>
+      <div className="hidden xl:block">
+        <div className="text-sm breadcrumbs bg-[#FAFBFB] mr-5 h-14 rounded-t-xl flex items-center ">
+          <ul className="ml-5 text-md">
+            <li>
+              <Image
+                src={breadcrumb}
+                alt="breadcrumbs book icon "
+                width={20}
+                height={20}
+              />
+            </li>
+            <li>
+              <a>Bukhari</a>
+            </li>
+            <li>1</li>
+          </ul>
+        </div>
       </div>
 
       {/* category name  for lg */}
-      <div className="h-28 mt-1 mr-5 px-5 lg:flex justify-between items-center bg-white rounded-b-xl  hidden ">
-        <div className="flex gap-5  items-center">
-          <div>
-            <Image src={bookLogo} alt="book name logo" width={40} height={40} />
+      <div className="hidden xl:block">
+        <div className="h-28 mt-1 mr-5 px-5 lg:flex justify-between items-center bg-white rounded-b-xl  hidden ">
+          <div className="flex gap-5  items-center">
+            <div>
+              <Image
+                src={bookLogo}
+                alt="book name logo"
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="">
+              <h1 className="font-bold text-xl mb-3 ">সহিহ বুখারী</h1>
+              <p className="text-xs font-bold"> সর্বমোট হাদিস - ৭৫৬৩</p>
+            </div>
           </div>
-          <div className="">
-            <h1 className="font-bold text-xl mb-3 ">সহিহ বুখারী</h1>
-            <p className="text-xs font-bold"> সর্বমোট হাদিস - ৭৫৬৩</p>
+          <div className="font-arabic text-3xl">
+            <p>صحيح البخاري</p>
           </div>
-        </div>
-        <div className="font-arabic text-3xl">
-          <p>صحيح البخاري</p>
         </div>
       </div>
 
       {/* category name for mb  */}
-      <div className="h-14 mt-1 mr-5 px-5 flex justify-between items-center bg-white rounded-b-xl lg:hidden">
-        <div className="flex gap-3  items-center">
+      <div className="h-14 mt-1 mr-5 px-5 flex justify-between items-center bg-white rounded-lg xl:rounded-b-xl xl:hidden">
+        <div className="flex gap-3 items-center">
           {/* drawer */}
 
           <div className="drawer">
@@ -227,8 +236,8 @@ const AllHadith = ({}) => {
                 <Image
                   src={lineBar}
                   alt="book name logo"
-                  width={15}
-                  height={15}
+                  width={20}
+                  height={20}
                 />
               </label>
             </div>
@@ -238,14 +247,14 @@ const AllHadith = ({}) => {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <div className="bg-white h-full pt-20 px-4">
+              <div className="bg-white w-[350px] h-[797px] pt-20 px-4 overflow-auto">
                 <Category />
               </div>
             </div>
           </div>
 
           <div className="cursor-pointer  whitespace-nowrap">
-            <h1 className="font-bold">সহিহ বুখারী</h1>
+            <h1 className="font-bold font-bangla-v2">সহিহ বুখারী</h1>
           </div>
         </div>
       </div>
