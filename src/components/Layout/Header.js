@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import logo from "../../assets/asset 0.png";
 import helpingHand from "../../assets/helping-hand.svg";
 import drawerIcon from "../../assets/setting-drawer.svg";
@@ -7,6 +8,7 @@ import SearchModal from "../UI/Modal/SearchModal";
 import RightSidebar from "../rightSide/RightSidebar";
 
 const Header = () => {
+  const [drawerView, setDrawerView] = useState(false);
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -118,6 +120,7 @@ const Header = () => {
                   alt="drawer-icon"
                   width={60}
                   height={60}
+                  onClick={() => setDrawerView(true)}
                 />
               </label>
             </div>
@@ -129,7 +132,7 @@ const Header = () => {
               ></label>
 
               <div className="menu p-4 w-90 min-h-full bg-base-200 text-base-content">
-                <RightSidebar />
+                <RightSidebar drawerView={drawerView} />
               </div>
             </div>
           </div>
