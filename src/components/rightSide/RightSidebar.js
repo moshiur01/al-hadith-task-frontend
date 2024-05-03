@@ -3,8 +3,8 @@ import { useState } from "react";
 import downArrow from "../../assets/down-arrow.svg";
 import Message from "./Message";
 const RightSidebar = () => {
-  const [arabicFontRange, setArabicFontRange] = useState(40);
-  const [TranslateFontRange, setTranslateFontRange] = useState(50);
+  const [arabicFontRange, setArabicFontRange] = useState(30);
+  const [TranslateFontRange, setTranslateFontRange] = useState(60);
   return (
     <div>
       {/* setting part  */}
@@ -14,7 +14,7 @@ const RightSidebar = () => {
         </div>
 
         <div className="ml-5 text-base mt-3 mr-4">
-          <p className="font-bold">আরবি ফন্ট সিলেক্ট করুন</p>
+          <p className="font-medium text-[16.8px]">আরবি ফন্ট সিলেক্ট করুন</p>
           {/* Dropdown Select */}
           <details className="dropdown">
             <summary className=" mt-2 w-full p-2 border rounded-md focus:outline-none flex justify-end gap-60">
@@ -41,9 +41,9 @@ const RightSidebar = () => {
           </details>
         </div>
 
-        {/*এরাবিক ফন্ট সাইজ */}
+        {/*arabic font size */}
         <div className="mx-4 mt-8">
-          <p className="mb-3 font-semibold">এরাবিক ফন্ট সাইজ</p>
+          <p className="mb-3 font-medium text-[16.8px]">এরাবিক ফন্ট সাইজ</p>
 
           <div className="flex justify-end items-center gap-6">
             <input
@@ -59,9 +59,10 @@ const RightSidebar = () => {
             <span> {arabicFontRange}</span>
           </div>
         </div>
-        {/*অনুবাদ ফন্ট সাইজ */}
+
+        {/*translate size */}
         <div className="mx-4 mt-8">
-          <p className="mb-3 font-semibold">অনুবাদ ফন্ট সাইজ</p>
+          <p className="mb-3 font-medium text-[16.8px]">অনুবাদ ফন্ট সাইজ</p>
 
           <div className="flex justify-end items-center gap-6">
             <input
@@ -79,8 +80,13 @@ const RightSidebar = () => {
         </div>
 
         <div className="flex justify-between mx-5 mt-6 pb-4 gap-48 text-lg font-semibold">
-          <span className="label-text text-nowrap">Night Mode</span>
-          <input type="checkbox" className="toggle toggle-accent w-11 h-5" />
+          <span className="text-nowrap font-medium text-[16.8px]">
+            নাইট মোড
+          </span>
+          <input
+            type="checkbox"
+            className="toggle [--tglbg:#ECEEF0] toggle-accent text-white w-11 h-5 border-0 "
+          />
         </div>
       </div>
 

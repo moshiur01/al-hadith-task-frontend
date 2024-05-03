@@ -8,7 +8,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ allHadith }) {
+export default function Home() {
   return (
     <div className="h-lvh">
       <header>
@@ -25,11 +25,11 @@ export default function Home({ allHadith }) {
             <Category />
           </div>
           <div className="grow mt-6 overflow-y-scroll scrollbar-light">
-            <AllHadith allHadith={allHadith} />
+            <AllHadith />
           </div>
 
           {/* right  */}
-          <div className=" flex-none w-[337px] mt-6 mr-4 hidden lg:block ml-3">
+          <div className=" flex-none w-[337px] mt-6 mr-4 hidden 2xl:block ml-3">
             <div>
               <RightSidebar />
             </div>
@@ -44,21 +44,21 @@ export default function Home({ allHadith }) {
   );
 }
 
-export const getStaticProps = async () => {
-  try {
-    const res = await fetch("http://localhost:5000/hadiths");
-    const data = await res.json();
-    return {
-      props: {
-        allHadith: data,
-      },
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {
-      props: {
-        allHadith: [],
-      },
-    };
-  }
-};
+// export const getStaticProps = async () => {
+//   try {
+//     const res = await fetch("http://localhost:5000/hadiths");
+//     const data = await res.json();
+//     return {
+//       props: {
+//         allHadith: data,
+//       },
+//     };
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//     return {
+//       props: {
+//         allHadith: [],
+//       },
+//     };
+//   }
+// };

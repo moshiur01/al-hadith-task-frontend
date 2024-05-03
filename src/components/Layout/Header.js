@@ -121,7 +121,7 @@ const Header = () => {
                 />
               </label>
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side drawer-overlay ">
               <label
                 htmlFor="my-drawer-4"
                 aria-label="close sidebar"
