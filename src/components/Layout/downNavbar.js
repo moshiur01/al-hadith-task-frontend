@@ -9,7 +9,7 @@ import subjectWise from "../../assets/subject-wise.svg";
 
 const DownNavbar = () => {
   return (
-    <div className="bg-white w-full h-full flex flex-row items-center justify-center gap-28  ">
+    <div className="bg-white w-full h-full flex flex-row items-center justify-center gap-28 p-2  ">
       <div className="w-14 h-14 flex items-center justify-center">
         <Image src={homeIcon} alt="asdfasdf" width={23} height={25} />
       </div>
