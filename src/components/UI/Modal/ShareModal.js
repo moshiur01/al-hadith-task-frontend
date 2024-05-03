@@ -60,7 +60,7 @@ const ShareModal = ({ id }) => {
         <div className="modal-action">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
-            <button className="btn bg-[#2B9E76] text-white px-12 text-lg font-thin font-serif hover:bg-[#2B9E76]">
+            <button className="btn bg-[#2B9E76] text-white px-14 text-base font-bangla-v2 font-normal hover:bg-[#2B9E76]">
               ওকে
             </button>
           </form>

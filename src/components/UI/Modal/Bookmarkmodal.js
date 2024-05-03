@@ -112,11 +112,11 @@ const BookmarkModal = ({ id }) => {
           <form method="dialog" className="flex gap-5">
             {/* if there is a button in form, it will close the modal */}
 
-            <button className="btn bg-[#EDEDED] px-12 text-lg font-thin font-serif">
+            <button className="btn bg-[#EDEDED] px-12 text-base font-bangla-v2 font-normal">
               বাতিল
             </button>
             <button
-              className="btn bg-[#2B9E76] text-white px-12 text-lg font-thin font-serif hover:bg-[#2B9E76]"
+              className="btn bg-[#2B9E76] text-white px-12 text-base font-bangla-v2 font-normal hover:bg-[#2B9E76]"
               onClick={() => {
                 toast.success("শিঘ্রই আসছে ইন শা আল্লাহ");
               }}

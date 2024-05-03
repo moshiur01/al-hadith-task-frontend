@@ -25,7 +25,7 @@ export default function Home() {
           <div className="flex-none w-[350px] h-[797px] bg-white mt-6 hidden xl:block rounded-2xl lg:ml-5 overflow-auto">
             <Category />
           </div>
-          <div className="grow mt-6 overflow-auto">
+          <div className="grow mt-6 overflow-auto sm:ml-6 md:rounded-lg">
             <AllHadith />
           </div>
 
